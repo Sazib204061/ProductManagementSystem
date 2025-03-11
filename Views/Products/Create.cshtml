@@ -1,0 +1,32 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<div>
+    <form asp-action="Create" method="post">
+        @* <div class="form-group"> *@
+        @*     <label asp-for="Id">Id</label> *@
+        @*     <input class="form-control" asp-for="Id" /> *@
+        @* </div> *@
+        <div class="form-group col-md-6">
+            <label asp-for="Name">Name</label>
+            <input class="form-control" asp-for="Name" />   @*Don't need input type it's determine base on asp-for tage helper*@
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Price">Price</label>
+            <input class="form-control" asp-for="Price" />
+        </div>
+
+        <div class="form-group col-md-6">
+            <label asp-for="StockQuantity">StockQuantity</label>
+            <input class="form-control" asp-for="StockQuantity" />
+        </div>
+
+
+        <div class="my-2">
+            <button class="btn btn-success" type="submit">Save</button>
+        </div>
+    </form>
+</div>
